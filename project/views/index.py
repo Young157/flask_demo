@@ -17,3 +17,12 @@ def index():
         # 登录了就根据session里的user_id查询用户数据，返回用户主页
         user = db.session.query(User).filter(User.user_id == user_id).first()
         return render_template('profile.html', user=user)
+
+
+# 登出功能
+@index_blu.route('/logout')
+def logout():
+    # 清除session
+    session.clear()
+    # 跳转到登录页面
+    return redirect(url_for('login.login'))

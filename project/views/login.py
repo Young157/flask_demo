@@ -15,7 +15,7 @@ def login():
         # 查询数据库里的数据,判断用户名密码是否正确
         user = db.session.query(User).filter(User.user_name == name, User.user_password == password).first()
         if user:
-            # 保存session之
+            # 保存session
             session['user_id'] = user.user_id
             # 返回主页
             return render_template('profile.html', user=user)
@@ -26,3 +26,6 @@ def login():
     else:
         # 返回数据给页面
         return render_template('login.html')
+
+
+

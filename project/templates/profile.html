@@ -33,6 +33,8 @@
 			<div class="profile">
 				<p>{{ user.short_description }}</p>
 			</div><!--//profile-->
+			<a href="{{ url_for('login.login') }}">登录</a>
+            <a href="{{ url_for('index.logout') }}">退出</a>
 		</div><!--//container-->
 	</div><!--//intro-->
 
