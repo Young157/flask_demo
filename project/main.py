@@ -2,12 +2,14 @@ from flask import Flask
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
 from views import index_blu
+from views import login_blu
 from models import db
 
 # 创建app
 app = Flask(__name__)
 # 注册蓝图
 app.register_blueprint(index_blu)
+app.register_blueprint(login_blu)
 # 对app进行初始化
 db.init_app(app)
 # 对app进行配置
