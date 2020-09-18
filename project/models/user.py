@@ -12,3 +12,4 @@ class User(db.Model):
     user_password = db.Column(db.String(50), nullable=False)
     head_img = db.Column(db.String(200))
     short_description = db.Column(db.String(300))
+    email = db.Column(db.String(50), nullable=False)

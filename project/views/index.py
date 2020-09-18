@@ -26,3 +26,5 @@ def logout():
     session.clear()
     # 跳转到登录页面
     return redirect(url_for('login.login'))
+
+
